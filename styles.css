@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+  --pink: #ED308C;
+  --beige: #FCF3E7;
+}
+
+html {
+  font-family: 'Lobster', cursive;
+  font-size: 100%;
+}
+
 body {
   text-align: center;
-  background: gray;
+  background: #444444;
+  color: var(--beige);
 }
+
 .card__container {
   cursor: pointer;
   position: absolute;
@@ -21,15 +35,18 @@ body {
   max-height: 600px;
   width: 80vw;
   height: 120vw;
+  font-size: 3rem;
+  color: var(--pink);
   transform-style: preserve-3d;
-  transform: rotateX(65deg);
+  transform: rotateX(35deg);
   transition: all 1s ease;
 }
+
 .open .card {
   transform: rotateX(0deg);
 }
 .card__panel {
-  border: 1px solid black;
+  /* border: 1px solid var(--pink); */
   position: absolute;
   top: 0;
   left: 0;
@@ -45,14 +62,14 @@ body {
 }
 .card__panel--front {
   backface-visibility: hidden;
-  background: #6288e6;
+  background: var(--beige);
   z-index: 1;
 }
 .open .card__panel--front {
   transform: rotate3d(0, 1, 0, -170deg);
 }
 .card__panel--inside-left {
-  background: #fff;
+  background: var(--beige);
   z-index: 0;
 }
 .open .card__panel--inside-left {
@@ -62,4 +79,50 @@ body {
   border-left: none;
   background: #fff;
   z-index: -1;
+}
+
+.scene {
+  position: relative;
+  background-image: url(./img/set.jpg);
+  background-repeat: no-repeat;
+  background-position: 30% 70%;
+  background-size: 500% 200%;
+  width: 100%;
+  height: 100%;
+}
+
+.dawn {
+  position: absolute;
+  bottom: 10%;
+  right: 40%;
+  width: 20%;
+  animation: dance 1s ease-in-out infinite alternate-reverse;
+  transform-origin: bottom;
+}
+
+.fireworks {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.scene p {
+  margin: 1rem;
+  color: var(--pink);
+  font-size: 4rem;
+  text-shadow: 0 0 8px #eb90bc;
+}
+
+.happy-text {
+  font-size: 2rem;
+}
+@keyframes dance {
+from {
+    transform: rotate(5deg);
+    }
+  to {
+    transform: rotate(-5deg);
+  }
+
 }
