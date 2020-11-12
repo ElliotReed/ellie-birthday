@@ -4,12 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" <title>Happy Birthday!</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" <title>Happy Birthday!</title>
 </head>
 
 <body>
-  <p>In the Broadway musical of life...</p>
-  <p>You are the Star!</p>
+
+  <p>Click card to open</p>
+
+  <div class="card__container js-card-opener">
+    <div class="card">
+      <div class="card__panel card__panel--front">
+        <p>In the Broadway musical of life...</p>
+        <!-- Your front of card message goes here -->
+      </div>
+      <div class="card__panel card__panel--inside-left">
+      </div>
+      <div class="card__panel card__panel--inside-right">
+        <p>You are the Star!</p>
+        <!-- Your inside card message goes here -->
+      </div>
+    </div>
+  </div>
+  <script>
+    const openBtn = document.querySelector(".js-card-opener");
+
+    openBtn.onclick = function () {
+      document.body.classList.toggle("open");
+    };
+  </script>
 </body>
 
 </html>
