@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="/assets/styles.css">
   <title>Happy Birthday!</title>
 </head>
 
@@ -15,26 +15,27 @@
     <div class="card">
       <div class="card__panel card__panel--front">
         <p>In the Broadway musical of life...</p>
-        <!-- Your front of card message goes here -->
       </div>
       <div class="card__panel card__panel--inside-left">
       </div>
       <div class="card__panel card__panel--inside-right">
         <div class="scene">
           <p>You are the Star!</p>
-          <img class="dawn" src="img/Dawn.png" />
-          <img class="fireworks" src="img/fireworks.gif" />
+          <img class="dawn" src="/assets/img/Dawn.png" />
+          <img class="fireworks" src="/assets/img/fireworks.gif" />
         </div>
-        <!-- Your inside card message goes here -->
       </div>
     </div>
   </div>
+
   <script>
+
     const openBtn = document.querySelector(".js-card-opener");
 
     openBtn.onclick = function () {
       document.body.classList.toggle("open");
     };
+
   </script>
 </body>
 
